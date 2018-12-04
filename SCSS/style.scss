@@ -2,6 +2,8 @@
 
 /*# sourceMappingURL=style.scss.map */
 
+/* Variables */
+
 $flexibilidad:flex;
 $colorblanco:white;
 $margen:40px;
@@ -23,6 +25,7 @@ body{
 	background-size: cover;
 	
 }
+
 
 .contenedor{
 	border:1px solid #26afff;
@@ -46,7 +49,7 @@ body{
 }
 
 .nombre{
-	margin-left:$margen;
+	margin-left:$margen+10-10;
 	width:$ancho;
 }
 
@@ -56,7 +59,7 @@ body{
 }
 
 .contacta {
-	margin-center:$margen;
+	margin-center:$margen+10-10;
 	border:1px solid #0CB1BF;
 	color:#0CB1BF;
 }
@@ -127,6 +130,69 @@ footer{
   padding: $padin;
   color: $colorblanco;
 }
+
+
+
+
+
+/* Anidados, Extendidos */
+
+#main {
+  width: 97%;
+ 
+  p, div {
+    font-size: 2em;
+    a { font-weight: bold; }
+  }
+ 
+  pre { font-size: 3em; }
+}
+
+ul,li{
+	font-family:Times New Roman;
+	color:white;
+}
+
+
+/*Operacion , Funcion */
+/*
+@function medidas($x){
+	@return $x*$ancho+$margen;
+}
+
+#prueba{width:medidas(10);}
+*/
+
+
+/* Mixins */
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+.box { @include transform(rotate(30deg)); }
+
+@mixin rounded($vert, $horz, $radius: 10px) {
+  border-#{$vert}-#{$horz}-radius: $radius;
+  -moz-border-radius-#{$vert}#{$horz}: $radius;
+  -webkit-border-#{$vert}-#{$horz}-radius: $radius;
+}
+ 
+#navbar li { @include rounded(top, left); }
+#footer { @include rounded(top, left, 5px); }
+#sidebar { @include rounded(top, left, 8px); }
+
+/* Bucles */
+
+@for $x from 1 through 10{
+
+	.col-#{x}{
+		width:100/$x+"%";
+	}
+}
+
 
 .html {width: 70%; background-color: #4CAF50;}
 .css {width: 70%; background-color: #2196F3;}

@@ -1,4 +1,5 @@
 /*# sourceMappingURL=style.scss.map */
+/* Variables */
 body {
   display: flex;
   font-family: arial;
@@ -91,6 +92,80 @@ footer {
   text-align: right;
   padding: 10px;
   color: white; }
+
+/* Anidados, Extendidos */
+#main {
+  width: 97%; }
+  #main p, #main div {
+    font-size: 2em; }
+    #main p a, #main div a {
+      font-weight: bold; }
+  #main pre {
+    font-size: 3em; }
+
+ul, li {
+  font-family: Times New Roman;
+  color: white; }
+
+/*Operacion , Funcion */
+/*
+@function medidas($x){
+	@return $x*$ancho+$margen;
+}
+
+#prueba{width:medidas(10);}
+*/
+/* Mixins */
+.box {
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg); }
+
+#navbar li {
+  border-top-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -webkit-border-top-left-radius: 10px; }
+
+#footer {
+  border-top-left-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px; }
+
+#sidebar {
+  border-top-left-radius: 8px;
+  -moz-border-radius-topleft: 8px;
+  -webkit-border-top-left-radius: 8px; }
+
+/* Bucles */
+.col-x {
+  width: "100%"; }
+
+.col-x {
+  width: "50%"; }
+
+.col-x {
+  width: "33.33333%"; }
+
+.col-x {
+  width: "25%"; }
+
+.col-x {
+  width: "20%"; }
+
+.col-x {
+  width: "16.66667%"; }
+
+.col-x {
+  width: "14.28571%"; }
+
+.col-x {
+  width: "12.5%"; }
+
+.col-x {
+  width: "11.11111%"; }
+
+.col-x {
+  width: "10%"; }
 
 .html {
   width: 70%;
